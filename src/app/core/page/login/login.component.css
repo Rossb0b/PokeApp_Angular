@@ -1,0 +1,49 @@
+.login-card {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+  box-sizing: border-box;
+  color: rgb(94, 108, 132);
+  margin: auto;
+  padding: 32px 40px;
+  background: rgb(255, 255, 255);
+  border-radius: 3px;
+}
+
+.footer {
+  padding-top: 10px;
+  margin-top: 30px;
+  border-top: 1px solid rgb(213, 216, 222);
+}
+
+a {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+.footer-link {
+  color: rgb(0, 82, 204) !important;
+  font-size: 14px !important;
+}
+
+.google-login:before {
+  color: rgb(151, 160, 175);
+  content: 'ou';
+  display: block;
+  font-size: 11px;
+  line-height: 1;
+  margin-bottom: 16px;
+
+  margin-top: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+:host {
+  margin: auto
+}

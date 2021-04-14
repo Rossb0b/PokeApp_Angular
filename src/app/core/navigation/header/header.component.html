@@ -1,0 +1,14 @@
+<mat-toolbar class="header">
+  <div class="container">
+    <strong routerLink="/">POKEAPP !</strong>
+    <div *ngIf="!user" class="align-right">
+      <a routerLink="/login">Se connecter</a>
+      <a routerLink="/register">S'enregistrer</a>
+    </div>
+    <div *ngIf="user" class="align-right">
+      <button mat-button color="primary" (click)="logout()">
+        <span>Se déconnecter</span>
+      </button>
+    </div>
+  </div>
+</mat-toolbar>

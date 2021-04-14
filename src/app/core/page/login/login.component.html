@@ -1,0 +1,17 @@
+<div class="login-card">
+  <h5 class="title">Veuillez vous connecter</h5>
+  <form [formGroup]="form" (ngSubmit)="login()">
+    <input type="text" placeholder="admin@admin.com" class="main-input" formControlName="email">
+    <input type="password" placeholder="Entrer son mot de passe" class="mt-1 main-input" formControlName="password">
+    <button mat-button class="submit-btn" [disabled]="loading ? '' : null">
+      <mat-spinner diameter="20" class="loading-spinner" *ngIf="loading"></mat-spinner> <ng-container *ngIf="!loading">
+        Se connecter
+      </ng-container>
+    </button>
+  </form>
+  <div class="footer">
+    <a class="footer-link">Mot de passe oublié</a>
+    <br>
+    <a class="footer-link" routerLink="/register">Je n'ai pas encore de compte</a>
+  </div>
+</div>

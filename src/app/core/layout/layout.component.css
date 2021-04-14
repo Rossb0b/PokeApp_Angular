@@ -1,0 +1,9 @@
+.content {
+  height: calc(100vh - 104px);
+  display: flex;
+  background: #fff;
+}
+
+.footer {
+  height: 40px;
+}
