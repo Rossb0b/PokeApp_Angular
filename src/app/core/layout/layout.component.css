@@ -1,4 +1,5 @@
 .content {
+  width: 100% !important;
   height: calc(100vh - 104px);
   display: flex;
   background: #fff;

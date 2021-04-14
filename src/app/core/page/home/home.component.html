@@ -1,1 +1,24 @@
-<h1 style="color: red">Page d'accueil</h1>
+<div style="width: 100% !important;">
+  <h1 class="text-center" style="color: red">Attraper les tous !</h1>
+
+  <div *ngIf="pokemons.length > 0" class="row">
+    <div class="col-8 mx-auto">
+
+      <div class="row" style="display: flex;justify-content: space-between;">
+        <mat-card *ngFor="let pokemon of pokemonsToDisplay" class="mt-3 col p-3 m-2">
+          <h3 class="text-center">{{ pokemon.name | uppercase }}</h3>
+        </mat-card>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col">
+          <mat-paginator [length]="1118"
+          [pageSize]="pokemonsPerPage"
+          [pageSizeOptions]="[100]"
+          (page)="onChangedPage($event)"
+          ></mat-paginator>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
