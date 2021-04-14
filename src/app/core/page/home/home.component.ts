@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
 
   async get(id: string): Promise<any> {
     try {
-      this.pokemon = this.pokeService.find(id);
+      this.pokemon = await this.pokeService.find(id);
     } catch (error) {
       throw new Error(error);
     }
@@ -39,7 +39,6 @@ export class HomeComponent implements OnInit {
   async getAll(): Promise<any> {
     try {
       this.pokemons = await this.pokeService.getAll();
-      this.pokemons = this.pokemons.results;
 
       for (let i = 0; i <= this.pokemonsPerPage - 1; i++) {
         if (this.pokemons[i]) {
